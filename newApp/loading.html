@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.7.js" ></script>
+</head>
+<body>
+     <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/load1.png"/></div>
+            <div class="swiper-slide"><img src="img/load2.png"/></div>
+            <div class="swiper-slide">
+            	<img src="img/bg1.png" />
+            	<div class="ac_list">
+            		<a>优质服务</a>
+            		<a>热门活动</a>
+            		<a>服务商城</a>
+            	</div>
+            	<p class="slogan">武汉三环内,您的宠物我来呵护</p>
+            	<a href="index.html" class="log_btn">立即体验</a>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+     </div>
+</body>
+<script src="js/swiper.min.js"></script>
+<script>
+$(function(){
+   $(".swiper-slide img").height($(window).height()).width($(window).width());
+   $(".ac_list").height( $(".ac_list").width()*85/100)
+})
+var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    slidesPerView: 1,
+    paginationClickable: true,
+    spaceBetween:0,
+    loop: false
+});
+ </script>
+</html>

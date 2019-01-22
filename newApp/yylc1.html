@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.7.js" ></script>
+</head>
+<body>
+	<div class="wrap">
+		<!--顶部-->
+	    <div class="top_fixed">
+	    	<a href="javascript:window.history.back()" class="left_btn"><i>&#xe622;</i></a>
+	    	<h1>联系方式</h1>
+	    	<!--<input type="search" placeholder="请输入服务项目"/>
+	    	<i class="sr">&#xe620;</i>-->
+	    	<a href="javascript:;" class="right_btn hide">预约</a>
+	    </div>
+	    
+	  
+	    
+	    <div class="container pd">
+	    	 <div class="main">
+			     <ul class="lc_list">
+				    <li class="lc_on"><a href="#">1</a><p>联系方式</p><li>
+					<li class="lc_line"><li>
+					<li class="lc"><a href="#">2</a><p>选择时间</p><li>
+					<li class="lc_line"><li>
+					<li class="lc"><a href="#">3</a><p>服务人员</p><li>
+					<li class="lc_line"><li>
+					<li class="lc"><a href="#">4</a><p>确认订单</p><li>
+				 </ul>
+				 
+				 <div  class="gdxx_bd" style="margin-bottom:10px">
+				 	<a class="add_address" href="add_dz.html">
+				 		<i>&#xe637;</i>新增地址
+				 	</a>
+				 </div>
+				 
+			     <div  class="gdxx_bd">
+			          <ul class="dz_list">
+					      <li><input type="radio" name="dz"/> 
+					        <div class="dzcheck"><label><a href="#"><img src="img/chec.png"/></a></label></div>
+					        <div class="dz_text">
+					         <p><span class="name">陈伟</span><span class="tel">15807197602</span></p>
+					         <p><span class="addr">北京市丰台区星火科技大厦1212</span></p>
+					        </div>
+					        <div class="del"><label><a href="#"><img src="img/scdz.png"/></a></label></div>
+					      </li>
+					      <li><input type="radio" name="dz"/> 
+					        <div class="dzcheck"><label><a href="#"><img src="img/chec.png"/></a></label></div>
+					        <div class="dz_text">
+					         <p><span class="name">陈伟</span><span class="tel">15807197602</span></p>
+					         <p><span class="addr">北京市丰台区星火科技大厦1212</span></p>
+					        </div>
+					        <div class="del"><label><a href="#"><img src="img/scdz.png"/></a></label></div>
+					      </li>
+					      <li><input type="radio" name="dz"/> 
+					        <div class="dzcheck"><label><a href="#"><img src="img/chec.png"/></a></label></div>
+					        <div class="dz_text">
+					         <p><span class="name">陈伟</span><span class="tel">15807197602</span></p>
+					         <p><span class="addr">北京市丰台区星火科技大厦1212</span></p>
+					        </div>
+					        <div class="del"><label><a href="#"><img src="img/scdz.png"/></a></label></div>
+					      </li>
+					</ul>		
+				</div>
+				<textarea class="step1"  placeholder="输入备注信息"></textarea>
+			</div>
+	    </div>
+	    
+	    
+	     <!--底部-->
+	    <div class="footer">
+      	   <a class="next" href="yylc2.html">下一步</a>
+       </div>
+</body>
+
+<script>
+	$(function(){
+         $(".dz_list").on("click",".dzcheck,.dz_text",function(){
+         	 var sb= $(this).siblings("input").prop("checked");
+         	 $("input[name=dz]").prop("checked",false);
+         	 $(".dzcheck img").attr("src","img/chec.png");
+         	 $(".dz_list li").removeClass("xz")
+         	 if(!sb){
+         	 	$(this).parent().find(".dzcheck img").attr("src","img/checked.png");
+         	 	$(this).siblings("input").prop("checked",true);
+         	 	$(this).parents(".dz_list li").addClass("xz")
+         	 }else{
+         	 	$(this).parent().find(".dzcheck img").attr("src","img/chec.png");
+         	 	$(this).siblings("input").prop("checked",false);
+         	 	$(this).parents(".dz_list li").removeClass("xz")
+         	 }
+         	 console.log($(this).siblings("input").prop("checked"))
+         })
+         $(".dz_list").on("click",".del",function(){
+         	 var that=this;
+         	 zz({"info":"确定删除该地址？","txt1":"确定","txt2":"取消"})
+         	 $(".btns a").click(function(){
+         	 	var index=$(this).index();
+         	 	if(index==0){
+         	 	   $(that).parents(".dz_list li").remove();
+         	    }
+         	 	$(".zz").remove()
+         	 })
+         	 
+         })
+	})
+</script>
+</html>

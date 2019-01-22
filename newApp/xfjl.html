@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.7.js" ></script>
+</head>
+<body>
+	<div class="wrap">
+		<!--顶部-->
+	    <div class="top_fixed">
+	    	<a href="javascript:window.history.back()" class="left_btn"><i>&#xe622;</i></a>
+	    	<h1>消费记录</h1>
+	    	<!--<input type="search" placeholder="请输入服务项目"/>
+	    	<i class="sr">&#xe620;</i>-->
+	    	<a href="javascript:;" class="right_btn hide">预约</a>
+	    </div>
+	    
+	  
+	    
+	    <div class="container">
+			 <table class="bang_list" width="100%">
+	        	<thead>
+	        		<tr><td width="30%">消费时间</td><td width="25%">消费项目</td><td width="25%">服务人员</td><td width="20%">消费金额</td></tr>
+	        		<tbody>
+	        			<tr>
+	        				<td>2017-09-30 17:23:15</td>
+	        				<td>宠物美容</td>
+	        				<td>董小姐</td>
+	        				<td class="red">￥36</td>
+	        			</tr><tr>
+	        				<td>2017-09-30 17:23:15</td>
+	        				<td>宠物美容</td>
+	        				<td>董小姐</td>
+	        				<td class="red">￥36</td>
+	        			</tr><tr>
+	        				<td>2017-09-30 17:23:15</td>
+	        				<td>宠物美容</td>
+	        				<td>董小姐</td>
+	        				<td class="red">￥36</td>
+	        			</tr><tr>
+	        				<td>2017-09-30 17:23:15</td>
+	        				<td>宠物美容</td>
+	        				<td>董小姐</td>
+	        				<td class="red">￥36</td>
+	        			</tr><tr>
+	        				<td>2017-09-30 17:23:15</td>
+	        				<td>宠物美容</td>
+	        				<td>董小姐</td>
+	        				<td class="red">￥36</td>
+	        			</tr><tr>
+	        				<td>2017-09-30 17:23:15</td>
+	        				<td>宠物美容</td>
+	        				<td>董小姐</td>
+	        				<td class="red">￥36</td>
+	        			</tr><tr>
+	        				<td>2017-09-30 17:23:15</td>
+	        				<td>宠物美容</td>
+	        				<td>董小姐</td>
+	        				<td class="red">￥36</td>
+	        			</tr><tr>
+	        				<td>2017-09-30 17:23:15</td>
+	        				<td>宠物美容</td>
+	        				<td>董小姐</td>
+	        				<td class="red">￥36</td>
+	        			</tr><tr>
+	        				<td>2017-09-30 17:23:15</td>
+	        				<td>宠物美容</td>
+	        				<td>董小姐</td>
+	        				<td class="red">￥36</td>
+	        			</tr><tr>
+	        				<td>2017-09-30 17:23:15</td>
+	        				<td>宠物美容</td>
+	        				<td>董小姐</td>
+	        				<td class="red">￥36</td>
+	        			</tr><tr>
+	        				<td>2017-09-30 17:23:15</td>
+	        				<td>宠物美容</td>
+	        				<td>董小姐</td>
+	        				<td class="red">￥36</td>
+	        			</tr>
+	        		</tbody>
+	        	</thead>
+            </table> 
+	    </div>
+
+</div>
+</body>
+
+<script>
+	 $(function(){
+	 	$(".zf_list li").click(function(){
+      	 $(this).addClass("on").siblings().removeClass()
+    })
+	 	$(".next").click(function(){
+	 		 zz({"info":"您已下单成功！","txt1":"回到首页","txt2":"查看订单"})
+	 		 $(".btns a").click(function(){
+         	 	var index=$(this).index();
+         	 	if(index==0){
+         	 	   window.location.href="shops.html"
+         	    }else{
+         	    	window.location.href="caselist.html"
+         	    }
+         	 	$(".zz").remove()
+         	 })
+	 	})
+	 })
+</script>
+</html>
