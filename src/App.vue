@@ -1,7 +1,7 @@
 <template>
   <div>
     <loading v-show="bLoading"></loading>
-    <transition enter-active-class="animated lightSpeedIn">
+    <transition enter-active-class="animated fadeIn">
       <router-view></router-view>
     </transition>
     <footbar v-show="bFoot"></footbar>
